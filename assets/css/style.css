@@ -1122,10 +1122,10 @@ hr {
 }
 
 .bg-overlay-gradient-secondary-2:before {
-  background-color: rgba(18, 28, 69, 0.95);
-  background-image: -webkit-linear-gradient(90deg, rgba(27, 26, 26, 0) 0%, rgba(5, 16, 59, 0) 0%, #05103b 65%);
-  background-image: -moz-linear-gradient(90deg, rgba(27, 26, 26, 0) 0%, rgba(5, 16, 59, 0) 0%, #05103b 65%);
-  background-image: -ms-linear-gradient(90deg, rgba(27, 26, 26, 0) 0%, rgba(5, 16, 59, 0) 0%, #05103b 65%);
+  background-color:#044c84;
+  background-image: -webkit-linear-gradient(90deg, rgba(27, 26, 26, 0) 0%, rgba(5, 16, 59, 0) 0%, #044c84 65%);
+  background-image: -moz-linear-gradient(90deg, rgba(27, 26, 26, 0) 0%, rgba(5, 16, 59, 0) 0%, #044c84 65%);
+  background-image: -ms-linear-gradient(90deg, rgba(27, 26, 26, 0) 0%, rgba(5, 16, 59, 0) 0%, #044c84 65%);
 }
 
 /*-------------------------
