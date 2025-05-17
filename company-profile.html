@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Optime Logistics &amp; Transportation Templatei">
-  <link href="assets/images/favicon/favicon-32x32.png" rel="icon">
-  <title>Suraj Sim Techno Works</title>
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>Optime Logistics &amp; Transportation Template</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:400,500,700%7cPoppins:400,600,700&display=swap">
   <link rel="stylesheet" href="assets/css/libraries.css" />
@@ -19,7 +19,7 @@
     <!-- =========================
         Header
     =========================== -->
-     <header id="header" class="header header-transparent">
+   <header id="header" class="header header-transparent">
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container">
           <a class="navbar-brand" href="index.html">
@@ -179,77 +179,146 @@
        page title 
     =========================== -->
     <section id="page-title" class="page-title bg-overlay bg-parallax">
-      <div class="bg-img"><img src="assets/images/page-titles/0.png" alt="background"></div>
+      <div class="bg-img"><img src="assets/images/page-titles/73.png" alt="background"></div>
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <h1 class="pagetitle__heading">Our Gallery</h1>
-           
+            <h1 class="pagetitle__heading">Company Profile</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="about-us.html">About Us</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Company Profile</li>
+              </ol>
+            </nav>
           </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.page-title -->
 
     <!-- =========================== 
-      projects Gallery 
+      locations
     ============================= -->
-  <section>
-<style>
-  section {
-  padding: 40px 5vw; /* ← This is the side margin you're asking about */
-}
-   .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns */
-      gap: 30px; /* gap between columns and rows like in image */
-      justify-content: center;
+    <section class="company-profile">
+      <style>
+            .company-profile {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
-    .grid img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 4px;
-      object-fit: cover;
+    .company-profile h2 {
+      text-align: center;
+      color: #005b8f;
+      margin-bottom: 40px;
     }
 
-    /* Tablet */
-    @media (max-width: 992px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .profile-box {
+      flex: 1 1 45%;
+      border-left: 4px solid #005b8f;
+      padding-left: 20px;
+    }
+
+    .icon-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .icon-title svg {
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+      fill: #eb6122;
+      flex-shrink: 0;
+    }
+
+    .icon-title h3 {
+      background-color:#eb6122;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .profile-box h4 {
+      color: #424242;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .profile-box p, .profile-box ul {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .profile-box ul {
+      padding-left: 20px;
+    }
+
+    .profile-box ul li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .profile-container {
+        flex-direction: column;
       }
     }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-</style>
-
-<div class="grid">
-  <img src="assets/images/case-studies/grid/37.png" alt="Image 1">
-  <img src="assets/images/case-studies/grid/36(2).png" alt="Image 2">
-  <img src="assets/images/case-studies/grid/35.png" alt="Image 3">
-  <img src="assets/images/case-studies/grid/34 2.png" alt="Image 4">
-  <img src="assets/images/case-studies/grid/33.png" alt="Image 5">
-  <img src="assets/images/case-studies/grid/32.png" alt="Image 6">
-  <img src="assets/images/case-studies/grid/31.png" alt="Image 7">
-  <img src="assets/images/case-studies/grid/30.png" alt="Image 8">
-  <img src="assets/images/case-studies/grid/29.png" alt="Image 9">
-  <img src="assets/images/case-studies/grid/28.png" alt="Image 10">
-  <img src="assets/images/case-studies/grid/gallery-1.jpg" alt="Image 11" style="height: 180px;">
-  <!-- <img src="your-image-12.jpg" alt="Image 12">
-  <img src="your-image-13.jpg" alt="Image 13">
-  <img src="your-image-14.jpg" alt="Image 14">
-  <img src="your-image-15.jpg" alt="Image 15">
-  <img src="your-image-16.jpg" alt="Image 16"> -->
-</div>
-
-  </section>
+      </style>
+      <h2>Company Profile</h2>
+      <div class="profile-container">
   
-    <!-- /.projects Gallery -->
+        <!-- OUR VISION -->
+        <div class="profile-box">
+          <div class="icon-title">
+            <!-- Eye Icon (Orange) -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 12c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0-8c-1.6 0-3 1.4-3 3s1.4 3 3 3 3-1.4 3-3-1.4-3-3-3z"/>
+            </svg>
+            <h3>OUR VISION</h3>
+          </div>
+          <h4>To Become an Industry Leader with Performance Excellence</h4>
+          <p>Our vision is to achieve Performance Excellence and be a recognized leader by Innovative, Engineered, Efficient and Customer-focused solutions for Pre-Engineered Building.</p>
+        </div>
+  
+        <!-- OUR MISSION -->
+        <div class="profile-box">
+          <div class="icon-title">
+         <!-- Target with Arrow Icon (Orange) -->
+<svg xmlns="http://www.w3.org/2000/svg" fill="orange" viewBox="0 0 24 24" width="36" height="36">
+  <path d="M12 2a10 10 0 1 0 10 10h-2a8 8 0 1 1-8-8V2zm0 4a6 6 0 1 0 6 6h-2a4 4 0 1 1-4-4V6zm7.707-3.707-4.829 4.829a1 1 0 0 0-.263.465l-.572 2.004 2.004-.572a1 1 0 0 0 .465-.263l4.829-4.829-1.634-1.634z"/>
+</svg>
+
+
+            <h3>OUR MISSION</h3>
+          </div>
+          <ul>
+            <li>To deliver the finest high engineered PEB Structure.</li>
+            <li>To maintain standards without compromise in product quality, reliability and service.</li>
+            <li>To adapt international standards and practices to fulfill the market requirement.</li>
+            <li>To groom and nurture R&D of product for innovation.</li>
+            <li>To provide healthy and positive workplace so as to deliver the best to customer.</li>
+          </ul>
+        </div>
+  
+      </div>
+    </section>
+    <!-- /.locations -->
+
+    <!-- ========================= 
+            contact 1
+      =========================  -->
+  
+    <!-- /.contact 1 -->
 
     <!-- ========================
             Footer
@@ -382,13 +451,7 @@
       </div><!-- /.Footer-bottom -->
     </footer><!-- /.Footer -->
 
-    <div class="module__search-container">
-      <i class="fa fa-times close-search"></i>
-      <form class="module__search-form">
-        <input type="text" class="search__input" placeholder="Type Words Then Enter">
-        <button class="module__search-btn"><i class="fa fa-search"></i></button>
-      </form>
-    </div><!-- /.module-search-container -->
+    
 
     <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button>
   </div><!-- /.wrapper -->

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="Optime Logistics &amp; Transportation Templatei">
-  <link href="assets/images/favicon/favicon-32x32.png" rel="icon">
+   <link href="assets/images/favicon/favicon-32x32.png" rel="icon">
   <title>Suraj Sim Techno Works</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:400,500,700%7cPoppins:400,600,700&display=swap">
@@ -19,7 +19,7 @@
     <!-- =========================
         Header
     =========================== -->
-     <header id="header" class="header header-transparent">
+    <header id="header" class="header header-transparent">
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container">
           <a class="navbar-brand" href="index.html">
@@ -173,88 +173,278 @@
           <!-- /.navbar-modules -->
         </div><!-- /.container -->
       </nav><!-- /.navabr -->
-    </header><!-- /.Header -->
+    </header>
+    <!-- /.Header -->
 
     <!-- ========================
        page title 
     =========================== -->
     <section id="page-title" class="page-title bg-overlay bg-parallax">
-      <div class="bg-img"><img src="assets/images/page-titles/0.png" alt="background"></div>
+      <div class="bg-img"><img src="assets/images/sliders/slider.png" alt="background"></div>
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <h1 class="pagetitle__heading">Our Gallery</h1>
-           
+            <h1 class="pagetitle__heading">Our Clients</h1>
+          
           </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.page-title -->
 
-    <!-- =========================== 
-      projects Gallery 
-    ============================= -->
-  <section>
-<style>
-  section {
-  padding: 40px 5vw; /* ← This is the side margin you're asking about */
-}
-   .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 columns */
-      gap: 30px; /* gap between columns and rows like in image */
-      justify-content: center;
+<section>
+  <style>
+
+    h2 {
+      text-align: center;
+      color: #005792;
+      font-size: 2rem;
+      margin-bottom: 30px;
     }
 
-    .grid img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 4px;
-      object-fit: cover;
-    }
-
-    /* Tablet */
-    @media (max-width: 992px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-</style>
-
-<div class="grid">
-  <img src="assets/images/case-studies/grid/37.png" alt="Image 1">
-  <img src="assets/images/case-studies/grid/36(2).png" alt="Image 2">
-  <img src="assets/images/case-studies/grid/35.png" alt="Image 3">
-  <img src="assets/images/case-studies/grid/34 2.png" alt="Image 4">
-  <img src="assets/images/case-studies/grid/33.png" alt="Image 5">
-  <img src="assets/images/case-studies/grid/32.png" alt="Image 6">
-  <img src="assets/images/case-studies/grid/31.png" alt="Image 7">
-  <img src="assets/images/case-studies/grid/30.png" alt="Image 8">
-  <img src="assets/images/case-studies/grid/29.png" alt="Image 9">
-  <img src="assets/images/case-studies/grid/28.png" alt="Image 10">
-  <img src="assets/images/case-studies/grid/gallery-1.jpg" alt="Image 11" style="height: 180px;">
-  <!-- <img src="your-image-12.jpg" alt="Image 12">
-  <img src="your-image-13.jpg" alt="Image 13">
-  <img src="your-image-14.jpg" alt="Image 14">
-  <img src="your-image-15.jpg" alt="Image 15">
-  <img src="your-image-16.jpg" alt="Image 16"> -->
-</div>
-
-  </section>
   
-    <!-- /.projects Gallery -->
+    .customers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .customer-logo {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .customer-logo:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .customer-logo img {
+    width: 100%;
+    height: 100px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      .customers-grid {
+        grid-template-columns: 1fr;
+      padding-left: 40px;
+      }
+      .table-container{
+        margin-left: -30px;
+      }
+    }
+
+     @media (max-width: 768px) {
+          .customer-logo {
+        width: 90%;
+       height: 200px;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+  table {
+    width:auto;
+    table-layout:auto;
+  
+  }
+  th, td {
+    padding: 4px 5px;
+    font-size: 12px;
+    word-wrap: break-word;
+  }
+  th:nth-child(1), td:nth-child(1) { /* Sr. No. */
+    width: 10px;
+  }
+  th:nth-child(2), td:nth-child(2) { /* Customer Name */
+    width:20px;
+  }
+  th:nth-child(3), td:nth-child(3) { /* Site Location */
+    width: 15px;
+  }
+  th:nth-child(4), td:nth-child(4) { /* Area in Sq. Ft */
+    width: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  th, td {
+    padding: 3px 4px;
+    font-size: 11px;
+  }
+  th:nth-child(2), td:nth-child(2) {
+    width: 80px;
+  }
+}
+
+ .table-container {
+      overflow-x: auto;
+      padding: 50px;
+      background-color: #fff;
+      max-width: 100%;
+      color: rgb(46, 45, 45);
+      
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 600px;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px 5px;
+      border: 1px solid #ccc;
+    }
+    th {
+      background-color: #0074a5;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+      .td-p{
+        font-size: 27px;
+        font-weight: 800;
+        color:#044c84;
+        padding-top: 15px;
+      }
+
+    @media (max-width: 768px) {
+      th, td {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+    @media (max-width: 480px) {
+      th, td{
+        padding: 2px;
+        font-size: 14px;
+        width: 1px;
+      }
+
+    }
+  </style>  
+  
+  <h2>OUR VALUED AND SATISFIED CUSTOMERS</h2>
+
+  <div class="customers-grid">
+    <!-- Replace src with actual image paths -->
+    <div class="customer-logo"><img src="assets/images/clients/72.png" alt="Greenpack"></div>
+    <div class="customer-logo"><img src="assets/images/clients/71.png" alt="Digvijay"></div>
+    <div class="customer-logo"><img src="assets/images/clients/70.png" alt="Pawan"></div>
+    <div class="customer-logo"><img src="assets/images/clients/69.png" alt="Garware"></div>
+    <div class="customer-logo"><img src="assets/images/clients/67.png" alt="Accrete"></div>
+
+    <div class="customer-logo"><img src="assets/images/clients/58.png" alt="Mauli"></div>
+    <div class="customer-logo"><img src="assets/images/clients/53.png" alt="Technomat"></div>
+    <div class="customer-logo"><img src="assets/images/clients/54.png" alt="Massia"></div>
+    <div class="customer-logo"><img src="assets/images/clients/51.png" alt="Green Gold Seeds"></div>
+    <div class="customer-logo"><img src="assets/images/clients/56.png" alt="GNI"></div>
+    <div class="customer-logo"><img src="assets/images/clients/55.png" alt="Akshay"></div>
+
+    <div class="customer-logo"><img src="assets/images/clients/59.png" alt="SOM"></div>
+    <div class="customer-logo"><img src="assets/images/clients/61.png" alt="Seeka"></div>
+    <div class="customer-logo"><img src="assets/images/clients/62.png" alt="Logo 1"></div>
+    <div class="customer-logo"><img src="assets/images/clients/63.png" alt="Logo 2"></div>
+    <div class="customer-logo"><img src="assets/images/clients/64.png" alt="Logo 3"></div>
+    <div class="customer-logo"><img src="assets/images/clients/65.png" alt="Logo "></div>
+  </div>
+
+
+
+    <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Customer Name</th>
+          <th>Site Location</th>
+          <th>Area in Sq. Ft</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Aarav Industries</td><td>Jalgaon</td><td>64731</td></tr>
+        <tr><td>2</td><td>Dr. S. Borole</td><td>Jalgaon</td><td>66766</td></tr>
+        <tr><td>3</td><td>Nishikant Industries</td><td>Jalgaon</td><td>26803</td></tr>
+        <tr><td>4</td><td>Sandesh Green Fuel</td><td>Jalgaon</td><td>52724</td></tr>
+        <tr><td>5</td><td>Deepvijay Industries</td><td>Jalgaon</td><td>32280</td></tr>
+        <tr><td>6</td><td>Sika Bikes</td><td>Jalgaon</td><td>46000</td></tr>
+        <tr><td>7</td><td>Akshay Udyog</td><td>Aurangabad</td><td>10000</td></tr>
+        <tr><td>8</td><td>Anukampa Industries</td><td>Nanded</td><td>40225</td></tr>
+        <tr><td>9</td><td>Ashishji Raka</td><td>Hingoli</td><td>22000</td></tr>
+        <tr><td>10</td><td>Auric Green Industries</td><td>Aurangabad</td><td>52000</td></tr>
+        <tr><td>11</td><td>Balaji Warehouse</td><td>Hingoli</td><td>24000</td></tr>
+        <tr><td>12</td><td>Biits Nirmal Infra Pvt.ltd</td><td>Ratnagiri</td><td>5000</td></tr>
+        <tr><td>13</td><td>Borse Brothers Engineers & Contractors Pvt Ltd</td><td>Dhule</td><td>45000</td></tr>
+        <tr><td>14</td><td>Bsc Rubber Industries</td><td>Aurangabad</td><td>10000</td></tr>
+        <tr><td>15</td><td>Cool Tech Appliances Pvt Ltd</td><td>Aurangabad</td><td>29215</td></tr>
+        <tr><td>16</td><td>Darshan Industries</td><td>Amrawati</td><td>24000</td></tr>
+        <tr><td>17</td><td>Dhoot Transmission Pvt Ltd - Chennai Plant</td><td>Chennai</td><td>69000</td></tr>
+        <tr><td>18</td><td>Dhoot Transmission Pvt Ltd - Farola Plants</td><td>Aurangabad</td><td>198430</td></tr>
+        <tr><td>19</td><td>Diamond Tiles</td><td>Ahmednagar</td><td>12912</td></tr>
+        <tr><td>20</td><td>Fabil Qualipack Pvt Ltd</td><td>Aurangabad</td><td>22596</td></tr>
+        <tr><td>21</td><td>Gajanan Krushi Utappan Bazar Samiti</td><td>Hingoli</td><td>93500</td></tr>
+        <tr><td>22</td><td>Gangadharji Bordekar</td><td>Parbhani</td><td>28000</td></tr>
+        <tr><td>23</td><td>Garware Hitech Polyfilms Pvt Ltd</td><td>Aurangabad</td><td>59000</td></tr>
+        <tr><td>24</td><td>Gni Infra</td><td>Aurangabad</td><td>27567</td></tr>
+        <tr><td>25</td><td>Green Gold Seed</td><td>Aurangabad</td><td>57000</td></tr>
+        <tr><td>26</td><td>H B Oil Industries</td><td>Nagpur</td><td>16550</td></tr>
+        <tr><td>27</td><td>Helical Springs</td><td>Aurangabad</td><td>32200</td></tr>
+        <tr><td>28</td><td>Shree Neel Industries</td><td>Ahmednagar</td><td>18500</td></tr>
+        <tr><td>29</td><td>Jeevan Milk & Food Product Pvt Ltd</td><td>Washim</td><td>19600</td></tr>
+        <tr><td>30</td><td>Kalavishwa Electricals</td><td>Aurangabad</td><td>18000</td></tr>
+        <tr><td>31</td><td>Kinetic Motor</td><td>Ahmednagar</td><td>37000</td></tr>
+        <tr><td>32</td><td>Kisan Agro Industries</td><td>Beed</td><td>84000</td></tr>
+        <tr><td>33</td><td>Kopanar Saheb</td><td>Aurangabad</td><td>33000</td></tr>
+        <tr><td>34</td><td>Kothari Furniture</td><td>Latur</td><td>17646</td></tr>
+        <tr><td>35</td><td>Lalson Hydraulics Pvt Ltd</td><td>Aurangabad</td><td>10000</td></tr>
+        <tr><td>36</td><td>Lamxi Cots Spin</td><td>Jalna</td><td>19368</td></tr>
+        <tr><td>37</td><td>Mathura Extraction</td><td>Parbhani</td><td>12000</td></tr>
+        <tr><td>38</td><td>Mauli Auto Cast Pvt Ltd</td><td>Osmanabad</td><td>14000</td></tr>
+        <tr><td>39</td><td>Mauli Cast Tech Pvt Ltd</td><td>Aurangabad</td><td>8000</td></tr>
+        <tr><td>40</td><td>Mauli Metal Industries</td><td>Osmanabad</td><td>15500</td></tr>
+        <tr><td>41</td><td>Meeta Screw</td><td>Aurangabad</td><td>24800</td></tr>
+        <tr><td>42</td><td>Narayani Agro</td><td>Jalgaon</td><td>21500</td></tr>
+        <tr><td>43</td><td>Umeshji Nawandhar</td><td>Washim</td><td>20000</td></tr>
+        <tr><td>44</td><td>Pariwar Food Mall</td><td>Hingoli</td><td>8000</td></tr>
+        <tr><td>45</td><td>Pawan Precision</td><td>Aurangabad</td><td>12000</td></tr>
+        <tr><td>46</td><td>Praneel Engineering</td><td>Aurangabad</td><td>8350</td></tr>
+        <tr><td>47</td><td>Rajeshji Aasawa</td><td>Nanded</td><td>34550</td></tr>
+        <tr><td>48</td><td>Rishita Industries</td><td>Aurangabad</td><td>9000</td></tr>
+        <tr><td>49</td><td>Salasar Warehouse</td><td>Hingoli</td><td>48000</td></tr>
+        <tr><td>50</td><td>Matoshri Infrastructure</td><td>Aurangabad</td><td>32000</td></tr>
+        <tr><td>51</td><td>Saptagiri Industries</td><td>Aurangabad</td><td>57500</td></tr>
+        <tr><td>52</td><td>Set On Sit Electricals Pvt Ltd</td><td>Aurangabad</td><td>57300</td></tr>
+        <tr><td>53</td><td>Shanti Udyog</td><td>Jalgaon</td><td>59000</td></tr>
+        <tr><td>54</td><td>Shivam Oxygen</td><td>Jalgaon</td><td>27000</td></tr>
+        <tr><td>55</td><td>Shivshakti Industries</td><td>Aurangabad</td><td>19368</td></tr>
+        <tr><td>56</td><td>Shree Gajanan Market</td><td>Washim</td><td>51000</td></tr>
+        <tr><td>57</td><td>Shree Saigan Industries</td><td>Aurangabad</td><td>19000</td></tr>
+        <tr><td>58</td><td>Shree Samarth Industries</td><td>Aurangabad</td><td>20000</td></tr>
+        <tr><td>59</td><td>Sudarshan Poly Plast</td><td>Aurangabad</td><td>30128</td></tr>
+        <tr><td>60</td><td>Suraj Sim Techno Works</td><td>Aurangabad</td><td>60000</td></tr>
+        <tr><td>61</td><td>Technomat Springs Pvt Ltd</td><td>Aurangabad</td><td>58104</td></tr>
+        <tr><td>62</td><td>Tirupati Warehouse</td><td>Hingoli</td><td>48000</td></tr>
+      </tbody>
+    </table>
+
+    <p class="td-p">And Many More....</p>
+
+  </div>
+</section>
 
     <!-- ========================
-            Footer
-    ========================== -->
-    <footer id="footer" class="footer">
+          Footer
+        ========================== -->
+  <footer id="footer" class="footer">
       <!-- <div class="footer-newsletter">
         <div class="container">
           <div class="row">
