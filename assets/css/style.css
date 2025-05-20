@@ -7155,6 +7155,18 @@ textarea.form-control {
   .service-item .service__icon i {
     font-size: 50px;
   }
+
+  .img-1{
+    max-height: 600px;
+  }
+
+  .img-2{
+    max-height: 310px;
+  }
+
+  .img-3{
+    max-height: 590px;
+  }
 }
 
 /*--------------------
