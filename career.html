@@ -4,15 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="description"
-      content="Optime Logistics &amp; Transportation Templatei"
-    />
+    <meta name="description" content="Optime" />
     <link href="assets/images/favicon/favicon-32x32.png" rel="icon" />
-    <title>Suraj Sim Techno Works</title>
+    <title>Suraj Sim Techno Work</title>
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700%7cPoppins:400,600,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700%7cPoppins:400,600,700"
     />
     <link rel="stylesheet" href="assets/css/libraries.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -98,13 +95,13 @@
                 </li>
                 <!-- /.nav-item -->
                 <!-- <li class="nav__item">
-                <a href="manufacturing-facilities.html" class="nav__item-link">Career</a>
+                <a href="careers.html" class="nav__item-link">Career</a>
               </li> -->
                 <!-- /.nav-item -->
                 <li class="nav__item with-dropdown">
                   <a
                     href="services.html"
-                    class="dropdown-toggle nav__item-link active"
+                    class="dropdown-toggle nav__item-link"
                     style="color: #044c84"
                     >Services</a
                   >
@@ -171,7 +168,7 @@
                 <li class="nav__item">
                   <a
                     href="contacs.html"
-                    class="nav__item-link"
+                    class="nav__item-link active"
                     style="color: #044c84"
                     >Contact Us</a
                   >
@@ -214,33 +211,7 @@
               <!-- /.navbar-nav -->
             </div>
             <!-- /.navbar-collapse -->
-            <!-- <div class="navbar-modules">
-            <ul class="modules__wrapper d-flex align-items-center list-unstyled">
-              <li>
-                <a href="#" class="module__btn module__btn-search"><i class="fa fa-search"></i></a>
-              </li>
-              <li class="d-none d-lg-block">
-                <a href="request-quote.html" class="module__btn btn__request btn">
-                  <span>Request A Quote</span><i class="icon-arrow-right"></i>
-                </a>
-              </li>
-              <li>
-                <div class="dropdown">
-                  <button class="module__btn dropdown-toggle" id="langDrobdown" data-toggle="dropdown">
-                    <span>En</span>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="langDrobdown">
-                    <a class="dropdown-item" href="#">
-                      <img src="assets/images/flags/united-states.png" alt="us"><span>Us</span>
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <img src="assets/images/flags/germany.png" alt="germany"><span>germany</span>
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div> -->
+
             <!-- /.navbar-modules -->
           </div>
           <!-- /.container -->
@@ -249,287 +220,123 @@
       </header>
       <!-- /.Header -->
 
-      <!-- ========================
-       page title 
-    =========================== -->
-      <section id="page-title" class="page-title bg-overlay bg-parallax">
-        <div class="bg-img">
-          <img src="assets/images/case-studies/grid/33.png" alt="background" />
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <h1 class="pagetitle__heading">Article</h1>
-            </div>
-            <!-- /.col-lg-12 -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
+      <!-- ========================= 
+            Google Map
+    =========================  -->
+
+      <section>
+      
+        <style>
+         .cont {
+      max-width: 800px;
+      margin: auto;
+    }
+    .intro-text {
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      color: #2e3b4e;
+      line-height: 1.6;
+      text-align: center;
+    }
+    form {
+      padding: 20px;
+      border-radius: 15px;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .submit-btn {
+      background-color: #2e3b4e;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #1e2a3a;
+    }
+        </style>
+       <div class="cont">
+   
+
+    <!-- Job Application Form -->
+    <form>
+
+      <h2>Submit Your Resume Here</h2>
+       <!-- Introductory Text -->
+    <div class="intro-text">
+      We offer people the opportunity to deploy their skills in a stimulating and interesting work environment where results have a direct impact on organisational development and growth. Our goal is to create a work environment where every employee is 
+      motivated to achieve better results. Our work environment gives the employees the freedom to innovate, express themselves and also to learn continuously.
+    </div>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="contact">Contact No.</label>
+      <input type="tel" id="contact" placeholder="Enter your contact number" required>
+
+      <label for="department">Apply for JOB (Department)</label>
+      <select id="department" required>
+        <option value="">Select Department</option>
+        <option value="Production">Production</option>
+        <option value="Safety">Safety</option>
+        <option value="Account / Finance">Account / Finance</option>
+        <option value="HR & Administration">HR & Administration</option>
+        <option value="Sales & Marketing">Sales & Marketing</option>
+        <option value="Production Planning & Control">Production Planning & Control</option>
+        <option value="Project Management Cell">Project Management Cell</option>
+        <option value="Project">Project</option>
+        <option value="SCM - Purchase">SCM - Purchase</option>
+        <option value="Store">Store</option>
+        <option value="Maintenance">Maintenance</option>
+        <option value="Logistics">Logistics</option>
+        <option value="Information & Technology">Information & Technology</option>
+        <option value="Engineering - Design">Engineering - Design</option>
+        <option value="Engineering - Detailing">Engineering - Detailing</option>
+        <option value="QA/QC">QA/QC</option>
+      </select>
+
+      <label for="job-title">Job Title</label>
+      <select id="job-title" required>
+        <option value="">Select Job Title</option>
+      </select>
+
+      <label for="remarks">Remarks</label>
+      <textarea id="remarks" placeholder="Write any remarks here"></textarea>
+
+      <label for="resume">Upload Resume</label>
+      <input type="file" id="resume" required>
+
+      <button type="submit" class="submit-btn">SUBMIT</button>
+    </form>
+  </div>
       </section>
-      <!-- /.page-title -->
-
-      <!-- ======================
-     Text Content Section
-    ========================= -->
-      <section id="textContentSection" class="text-content-section pb-90">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-4">
-              <aside class="sidebar mb-30">
-                <div class="widget widget-categories">
-                  <h5 class="widget__title">Categories</h5>
-                  <div class="widget-content">
-                    <ul class="list-unstyled">
-                      <li><a href="article-3.html"  class="active">Business & Entrepreneurship</a></li>
-                      <li>
-                        <a href="article-1.html">Industry & Manufacturing</a>
-                      </li>
-                      <li><a href="article-2.html">Engineering Innovations</a></li>
-                    </ul>
-                  </div>
-                  <!-- /.widget-content -->
-                </div>
-                <!-- /.widget-categories -->
-
-                <div
-                  class="widget widget-help bg-overlay bg-overlay-grdient-secondary"
-                >
-                  <div class="bg-img">
-                    <img src="assets/images/sidebar/1.jpg" alt="background" />
-                  </div>
-                  <div class="widget__content">
-                    <h5>
-                      How Can <br />
-                      We Help You!
-                    </h5>
-                    <p>
-                      We understand the importance approaching each work
-                      integrally and believe in the power of simple and easy
-                      communication.
-                    </p>
-                    <a href="contacs.html" class="btn btn__primary btn__hover2 btn__block"
-                      >Schedule An Appointment</a
-                    >
-                  </div>
-                  <!-- /.widget-content -->
-                </div>
-                <!-- /.widget-help -->
-
-                <div class="widget widget-posts">
-                <h5 class="widget__title">Other Articles</h5>
-                <div class="widget__content">
-                  <!-- post item #1 -->
-                  <div class="widget-post-item">
-                    <div class="widget__post-img">
-                      <a href="article-2.html"><img src="assets/images/lightbox/article-2-2.png" alt="product"></a>
-                    </div><!-- /.widget-post-img -->
-                    <div class="widget__post-content">
-                      <div class="d-flex flex-wrap align-items-center">
-                        <div class="widget__post-cat">
-                          <a href="article-2.html">Engineering Solutions to Fabrication</a>
-                        </div><!-- /.widget-post-cat -->
-                        <!-- <span class="widget__post-date">Jan 20, 2019</span> -->
-                      </div>
-                      <h6 class="widget__post-title"><a href="article-2.html">
-A PIONEER IN PEB STRUCTURE MFG</a></h6>
-                    </div><!-- /.widget-post-content -->
-                  </div><!-- /.widget-post-item -->
-                  <!-- post item #2 -->
-                  <div class="widget-post-item">
-                    <div class="widget__post-img">
-                      <a href="article-3.html"><img src="assets/images/lightbox/article-1.jpg" alt="product"></a>
-                    </div><!-- /.widget-post-img -->
-                    <div class="widget__post-content">
-                      <div class="d-flex flex-wrap align-items-center">
-                        <div class="widget__post-cat">
-                          <a href="article-3.html">PEB मध्ये सूरज Sim Techno होतोय Brand</a>
-                        </div><!-- /.widget-post-cat -->
-                        <!-- <span class="widget__post-date">Feb 20, 2021</span> -->
-                      </div>
-                      <h6 class="widget__post-title"><a href="article-3.html">
-दीपक तोष्णीवाल : मित्र म्हणजे टास्क फोर्स, व्यवसायाचे बाळकडू वडिलांकडूनच</a></h6>
-                    </div><!-- /.widget-post-content -->
-                  </div><!-- /.widget-post-item -->
-                </div><!-- /.widget-content -->
-              </div><!-- /.widget-posts -->
-              </aside>
-              <!-- /.sidebar -->
-            </div>
-            <!-- /.col-lg-4 -->
-            <div class="col-sm-12 col-md-12 col-lg-8">
-              <div class="text__block">
-                <h6 class="text__block-title">Overview</h6>
-                <p class="text__block-desc">
-                  A leading fabrication company from Aurangabad, founded as
-                  Suraj Steel Work in 1986 and later evolved into Suraj SIM
-                  Techno Works Pvt Ltd under the leadership of the next
-                  generation – Amol Surdia, Vishal Toshniwal, and Deepak
-                  Toshniwal.
-                   The company specializes in:
-                   
-                    <ol style="list-style: circle;"><li>Pre-Engineered  Buildings (PEBs)</li>
-                   <li> Heavy structural fabrication</li>
-                   <li> Turnkey civil
-                  and mechanical engineering solutions </li>
-                </ol>
-                  <div style="padding-top: 10px;">
-                  With a strong focus on
-                  innovation, durability, design precision, and timely delivery,
-                  they cater to major clients like RSB Industries, Nirmiti
-                  Industries, and more.
-
-                  </div>
-                </p>
-                <div
-                  class="video-banner bg-overlay mb-60 img-3"
-                  style="height: 1100px"
-                >
-                  <div class="bg-img">
-                    <img
-                      src="assets/images/lightbox/article-3-1.jpg"
-                      alt="background"
-                    />
-                  </div>
-                  <div
-                    class="video__btn video__btn-white video__btn-left-bottom"
-                  ></div>
-                </div>
-                <!-- /.video -->
-              <p class="text__block-desc">
-                 The second part of the article highlights Susheel Ragade, an educator who has transformed the lives of thousands of students preparing for RBI and other competitive exams.
-
-He has built a strong presence through:
-                   
-                    <ol style="list-style: circle;"><li>Social media platforms like YouTube, Quora, and Telegram</li>
-                   <li>His own initiative called Target RBI
-
-</li>
-                   <li>Delivering coaching in English and Quantitative Aptitude
-
-</li>
-                </ol>
-                  <div style="padding-top: 10px;">
-                 Susheel Ragade proves that teaching with passion, clarity, and purpose can make a difference even in the digital era.re.
-
-                  </div>
-                </p>
-              </div>
-              <!-- /.text-block -->
-
-              <h5>Key Benifits</h5>
-              <div id="accordion" class="mb-50">
-                <div class="accordion-item">
-                  <div
-                    class="accordion__item-header"
-                    data-toggle="collapse"
-                    data-target="#collapse1"
-                  >
-                    <a class="accordion__item-title" href="#"
-                      >End-to-End Fabrication Solutions</a
-                    >
-                  </div>
-                  <!-- /.accordion-item-header -->
-                  <div id="collapse1" class="collapse" data-parent="#accordion">
-                    <div class="accordion__item-body">
-                      <p>Suraj SIM provides complete services—from structural design to final fabrication—ensuring quality, speed, and reliability for industrial and commercial projects.
-
-
-                      </p>
-                    </div>
-                    <!-- /.accordion-item-body -->
-                  </div>
-                </div>
-                <!-- /.accordion-item -->
-                <div class="accordion-item">
-                  <div
-                    class="accordion__item-header"
-                    data-toggle="collapse"
-                    data-target="#collapse2"
-                  >
-                    <a class="accordion__item-title" href="#"
-                      >Modern Leadership with Technical Expertise
-</a
-                    >
-                  </div>
-                  <!-- /.accordion-item-header -->
-                  <div id="collapse2" class="collapse" data-parent="#accordion">
-                    <div class="accordion__item-body">
-                      <p>Led by qualified professionals, the company blends innovation with experience to deliver advanced, durable, and efficient fabrication structures.
-
-
-                      </p>
-                    </div>
-                    <!-- /.accordion-item-body -->
-                  </div>
-                </div>
-                <!-- /.accordion-item -->
-                <div class="accordion-item">
-                  <div
-                    class="accordion__item-header opened"
-                    data-toggle="collapse"
-                    data-target="#collapse3"
-                  >
-                    <a class="accordion__item-title" href="#"
-                      >Accessible Competitive Exam Coaching
-</a
-                    >
-                  </div>
-                  <!-- /.accordion-item-header -->
-                  <div
-                    id="collapse3"
-                    class="collapse show"
-                    data-parent="#accordion"
-                  >
-                    <div class="accordion__item-body">
-                      <p>Through platforms like YouTube, Quora, and Telegram, thousands of students across India receive clear, simplified guidance for exams like RBI and banking services.
-
-
-                      </p>
-                    </div>
-                    <!-- /.accordion-item-body -->
-                  </div>
-                </div>
-                <!-- /.accordion-item -->
-
-                <!-- /.accordion-item -->
-                <div class="accordion-item">
-                  <div
-                    class="accordion__item-header"
-                    data-toggle="collapse"
-                    data-target="#collapse2"
-                  >
-                    <a class="accordion__item-title" href="#"
-                      >Use of Social Media for Educational Impact
-</a
-                    >
-                  </div>
-                  <!-- /.accordion-item-header -->
-                  <div id="collapse2" class="collapse" data-parent="#accordion">
-                    <div class="accordion__item-body">
-                      <p>By leveraging social media, Susheel Ragade transforms traditional teaching into a digital movement, helping learners anywhere access quality content.
-
-
-                      </p>
-                    </div>
-                    <!-- /.accordion-item-body -->
-                  </div>
-                </div>
-              </div>
-
-              <!-- /.testimonial4 -->
-            </div>
-            <!-- /.col-lg-8 -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /.Text Content Section -->
 
       <!-- ========================
-      Footer
-    ========================== -->
+          Footer
+        ========================== -->
       <footer id="footer" class="footer">
         <!-- <div class="footer-newsletter">
         <div class="container">
@@ -680,21 +487,6 @@ He has built a strong presence through:
         <!-- /.Footer-bottom -->
       </footer>
       <!-- /.Footer -->
-
-      <div class="module__search-container">
-        <i class="fa fa-times close-search"></i>
-        <form class="module__search-form">
-          <input
-            type="text"
-            class="search__input"
-            placeholder="Type Words Then Enter"
-          />
-          <button class="module__search-btn">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
-      </div>
-      <!-- /.module-search-container -->
 
       <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button>
     </div>
