@@ -193,23 +193,31 @@
       max-width: 800px;
       margin: auto;
     }
-    .intro-text {
-      padding: 20px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-      color: #2e3b4e;
-      line-height: 1.6;
-      text-align: center;
-    }
+     h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 1rem 0;
+    color: #333;
+  }
+
+  .intro-text {
+    font-size:10px;
+    line-height: 1.6;
+    color: #555;
+    padding: 0 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+  }
     form {
       padding: 20px;
       border-radius: 15px;
     }
-    h2 {
+    /* h2 {
       margin-top: 0;
       margin-bottom: 15px;
       text-align: center;
-    }
+    } */
     label {
       display: block;
       margin-bottom: 5px;
@@ -236,6 +244,46 @@
     .submit-btn:hover {
       background-color: #1e2a3a;
     }
+  /* Tablet styles */
+  @media (min-width: 600px) {
+    h2 {
+      
+      margin-top: 50px;
+      font-size: 2rem;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      padding: 0 2rem;
+    }
+  }
+
+  @media (min-width: 400px) {
+    h2 {
+      
+      margin-top: 50px;
+      font-size: 1.5rem;
+    }
+
+    .intro-text {
+      font-size: 0.8rem;
+      padding: 0 2rem;
+    }
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .intro-text {
+      font-size: 0.9rem;
+      padding: 0 3rem;
+    }
+  }
+   
+
         </style>
        <div class="cont">
    

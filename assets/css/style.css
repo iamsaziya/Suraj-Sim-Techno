@@ -4263,7 +4263,7 @@ textarea.form-control {
 -----------------------*/
 [data-nav=false] .owl-nav,
 [data-dots=false] .owl-dots {
-  display: none;
+  display:none;
 }
 
 .owl-carousel .owl-item img {
