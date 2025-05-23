@@ -2383,6 +2383,32 @@ textarea.form-control {
 
 }
 
+  /* Tablet styles */
+  @media (min-width: 600px) {
+   
+    .navbar .navbar-brand img {
+     padding-top: 0;
+    }
+  }
+
+  @media (min-width: 400px) {
+   
+
+   .navbar .navbar-brand img {
+   padding-top: 0;
+    }
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+   
+    .navbar .navbar-brand img {
+      height: 270px;
+  padding-top: 30px;
+    }
+  }
+   
+
 .navbar .logo-light {
   display: none;
 }
@@ -3594,6 +3620,7 @@ textarea.form-control {
 @media only screen and (min-width: 320px) and (max-width: 575px) {
   .navbar .navbar-brand img {
     max-width: 190px;
+    padding-bottom: 50px;
   }
 
   .module__search-container .module__search-form {
