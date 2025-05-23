@@ -7927,7 +7927,28 @@ textarea.form-control {
 
 /* Extra Small Devices */
 @media only screen and (min-width: 320px) and (max-width: 575px) {
-  #map {
-    height: 300px;
+  #header {
+    height: 150px;
+  }
+}
+
+/* Medium Size Screens */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #header {
+    height: 200px;
+  }
+}
+
+/* Mobile Phones and tablets */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  #header {
+    height: 150px;
+  }
+}
+
+/* Extra Small Devices */
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+  #header {
+    height: 200px;
   }
 }
