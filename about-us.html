@@ -12,6 +12,7 @@
     href="https://fonts.googleapis.com/css?family=Roboto:400,500,700%7cPoppins:400,600,700&display=swap">
   <link rel="stylesheet" href="assets/css/libraries.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  
 </head>
 
 <body>
@@ -821,153 +822,297 @@ Piyush Engineering Work</p>
     <!-- ======================
            projects Carousel
       ========================= -->
-    
-  <section id="cardsCarousel" class="cards-carousel">
-   <style>
-        .cards-carousel {
+  <section id="uiCarousel" class="ui-carousel">
+       <style>
+        /* Bootstrap Grid System - Essential classes only */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+        
+        .col-sm-12, .col-md-12, .col-lg-6, .col-lg-12, .col-lg-3 {
+            padding: 0 15px;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        
+        @media (min-width: 992px) {
+            .col-lg-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .col-lg-12 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .offset-lg-3 {
+                margin-left: 25%;
+            }
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+
+        /* Swiper Core Styles */
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+            z-index: 1;
+        }
+        
+        .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            transition-property: transform;
+            box-sizing: content-box;
+           
+        }
+        
+        .swiper-slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition-property: transform;
+        }
+        
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            width: 27px;
+            height: 44px;
+            margin-top: -22px;
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #007aff;
+        }
+        
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-family: swiper-icons;
+            font-size: 20px;
+            text-transform: none !important;
+            letter-spacing: 0;
+            text-transform: none;
+            font-variant: initial;
+            line-height: 1;
+        }
+        
+        .swiper-button-prev:after {
+            content: '‹';
+        }
+        
+        .swiper-button-next:after {
+            content: '›';
+        }
+        
+        .swiper-button-prev {
+            left: 10px;
+            right: auto;
+        }
+        
+        .swiper-button-next {
+            right: 10px;
+            left: auto;
+        }
+        
+        .swiper-pagination {
+            position: absolute;
+            text-align: center;
+            transition: 0.3s opacity;
+            transform: translate3d(0, 0, 0);
+            z-index: 10;
+        }
+        
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #000;
+            opacity: 0.2;
+            margin: 0 3px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #007aff;
+        }
+
+        /* Your Custom Carousel Styles */
+        .ui-carousel {
             padding: 80px 0;
             background-color: #f8f9fa;
         }
 
-        .cards-heading {
+        .ui-heading {
             margin-bottom: 60px;
         }
 
-        .cards-heading__title {
+        .ui-heading__title {
             font-size: 2.5rem;
             font-weight: 700;
             color: #333;
             margin-bottom: 20px;
         }
 
-        .cards-heading__desc {
+        .ui-heading__desc {
             font-size: 1.1rem;
             color: #666;
             line-height: 1.6;
         }
 
-        .card-item {
+        .ui-item {
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            margin: 0 15px;
             transition: transform 0.3s ease;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
         }
 
-        .card-item:hover {
-            transform: translateY(-5px);
+        .ui-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .card__img {
+        .ui__img {
             position: relative;
             height: 300px;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
-        .card-image-slider {
+        .ui-image-slider {
             height: 100%;
+            width: 100%;
         }
 
-        .card-image-slider .owl-item {
+        .ui-image-slider .swiper-slide {
             height: 300px;
         }
 
-        .card-image-slider img {
+        .ui-image-slider img {
             width: 100%;
             height: 300px;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
 
-        .card-image-slider img:hover {
+        .ui-image-slider img:hover {
             transform: scale(1.05);
         }
 
-        .card__content {
+        .ui__content {
             padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        .card__desc {
+        .ui__desc {
             margin-bottom: 8px;
             color: #555;
             font-size: 0.95rem;
             line-height: 1.5;
         }
 
-        .card__desc:first-child {
+        .ui__desc:first-child {
             font-weight: 600;
             color: #333;
             font-size: 1.1rem;
             margin-bottom: 15px;
         }
 
-        .card__desc:last-child {
+        .ui__desc:last-child {
             margin-bottom: 0;
         }
 
-        .card-image-slider.single-image {
+        /* Single image handling */
+        .ui-image-slider.single-image {
             display: block !important;
             width: 100%;
             height: 300px;
         }
 
-        .card-image-slider.single-image .slide-item {
+        .ui-image-slider.single-image .slide-item {
             display: block !important;
             height: 300px;
             width: 100%;
         }
 
-        .card-image-slider.single-image img {
+        .ui-image-slider.single-image img {
             width: 100% !important;
             height: 300px !important;
             object-fit: cover;
             display: block !important;
         }
 
-        .card-image-slider .owl-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-
-        .card-image-slider .owl-prev,
-        .card-image-slider .owl-next {
+        /* Swiper navigation for individual image sliders */
+        .ui-image-slider .swiper-button-next,
+        .ui-image-slider .swiper-button-prev {
             position: absolute;
             background: rgba(0, 0, 0, 0.5) !important;
             color: white !important;
             border-radius: 50%;
             width: 40px;
             height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
+            margin-top: -20px;
             transition: all 0.3s ease;
             opacity: 0;
+            z-index: 10;
         }
 
-        .card-image-slider:hover .owl-prev,
-        .card-image-slider:hover .owl-next {
+        .ui-image-slider:hover .swiper-button-next,
+        .ui-image-slider:hover .swiper-button-prev {
             opacity: 1;
         }
 
-        .card-image-slider .owl-prev {
+        .ui-image-slider .swiper-button-prev {
             left: 15px;
         }
 
-        .card-image-slider .owl-next {
+        .ui-image-slider .swiper-button-next {
             right: 15px;
         }
 
-        .card-image-slider .owl-prev:hover,
-        .card-image-slider .owl-next:hover {
+        .ui-image-slider .swiper-button-next:hover,
+        .ui-image-slider .swiper-button-prev:hover {
             background: rgba(0, 0, 0, 0.7) !important;
         }
 
-        .card-image-slider .owl-dots {
+        .ui-image-slider .swiper-button-next:after,
+        .ui-image-slider .swiper-button-prev:after {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Swiper pagination for individual image sliders */
+        .ui-image-slider .swiper-pagination {
             position: absolute;
             bottom: 15px;
             left: 50%;
@@ -975,134 +1120,292 @@ Piyush Engineering Work</p>
             z-index: 10;
         }
 
-        .card-image-slider .owl-dot {
+        .ui-image-slider .swiper-pagination-bullet {
             display: inline-block;
             margin: 0 3px;
-        }
-
-        .card-image-slider .owl-dot span {
-            display: block;
             width: 8px;
             height: 8px;
             background: rgba(255, 255, 255, 0.5);
             border-radius: 50%;
             transition: all 0.3s ease;
+            opacity: 1;
         }
 
-        .card-image-slider .owl-dot.active span {
+        .ui-image-slider .swiper-pagination-bullet-active {
             background: white;
             transform: scale(1.2);
         }
 
+        /* Main carousel styles */
+        .main-ui-carousel {
+            padding-bottom: 50px;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-ui-carousel .swiper-pagination {
+            bottom: 20px;
+        }
+
+        .main-ui-carousel .swiper-pagination-bullet {
+            background: #007bff;
+            opacity: 0.3;
+            width: 12px;
+            height: 12px;
+        }
+
+        .main-ui-carousel .swiper-pagination-bullet-active {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .main-ui-carousel .swiper-button-next,
+        .main-ui-carousel .swiper-button-prev {
+            color: #007bff;
+            background: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .main-ui-carousel .swiper-button-next:hover,
+        .main-ui-carousel .swiper-button-prev:hover {
+            background: #007bff;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .main-ui-carousel .swiper-button-next:after,
+        .main-ui-carousel .swiper-button-prev:after {
+            font-size: 18px;
+            font-weight: bold;
+        }
 
         .mb-50 {
             margin-bottom: 50px;
         }
 
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .ui-carousel {
+                padding: 60px 20px;
+            }
+        }
+
         @media (max-width: 992px) {
-            .cards-heading__title {
+            .ui-heading__title {
                 font-size: 2rem;
             }
 
-            .card__img,
-            .card-image-slider .owl-item,
-            .card-image-slider img {
+            .ui__img,
+            .ui-image-slider .swiper-slide,
+            .ui-image-slider img {
                 height: 250px;
+            }
+
+            .ui-item {
+                height: 450px;
+            }
+
+            .ui__content {
+                padding: 20px;
             }
         }
 
         @media (max-width: 768px) {
-            .cards-heading__title {
+            .ui-carousel {
+                padding: 40px 15px;
+            }
+
+            .ui-heading__title {
                 font-size: 1.75rem;
             }
 
-            .card__img,
-            .card-image-slider .owl-item,
-            .card-image-slider img {
+            .ui__img,
+            .ui-image-slider .swiper-slide,
+            .ui-image-slider img {
                 height: 200px;
+            }
+
+            .ui-item {
+                height: 400px;
+                margin-bottom: 20px;
+            }
+
+            .ui__content {
+                padding: 15px;
+            }
+
+            .ui__desc {
+                font-size: 0.9rem;
+            }
+
+            .ui__desc:first-child {
+                font-size: 1rem;
+            }
+
+            .main-ui-carousel .swiper-button-next,
+            .main-ui-carousel .swiper-button-prev {
+                width: 40px;
+                height: 40px;
+            }
+
+            .main-ui-carousel .swiper-button-next:after,
+            .main-ui-carousel .swiper-button-prev:after {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .ui-carousel {
+                padding: 30px 10px;
+            }
+
+            .ui-heading__title {
+                font-size: 1.5rem;
+            }
+
+            .ui-heading__desc {
+                font-size: 1rem;
+            }
+
+            .ui__img,
+            .ui-image-slider .swiper-slide,
+            .ui-image-slider img {
+                height: 180px;
+            }
+
+            .ui-item {
+                height: 350px;
+            }
+
+            .ui__content {
+                padding: 12px;
+            }
+
+            .ui__desc {
+                font-size: 0.85rem;
+                margin-bottom: 6px;
+            }
+
+            .ui__desc:first-child {
+                font-size: 0.95rem;
+                margin-bottom: 10px;
+            }
+
+            .main-ui-carousel .swiper-button-next,
+            .main-ui-carousel .swiper-button-prev {
+                display: none;
             }
         }
     </style>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-                <div class="cards-heading text-center mb-50">
-                    <h2 class="cards-heading__title">Featured Projects</h2>
-                    <p class="cards-heading__desc">We presents the following case studies that exemplify the type of solutions and services we are providing across our customer base.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="ui-heading text-center mb-50">
+                        <h2 class="ui-heading__title">Featured Projects</h2>
+                        <p class="ui-heading__desc">We present the following case studies that exemplify the type of solutions and services we are providing across our customer base.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="swiper main-ui-carousel">
+                        <div class="swiper-wrapper">
+
+                            <!-- First UI Item -->
+                            <div class="swiper-slide">
+                                <div class="ui-item">
+                                    <div class="ui__img">
+                                        <div class="swiper ui-image-slider ui-slider-1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide slide-item">
+                                                    <img src="assets/images/case-studies/grid/p-1.jpg" alt="Endurance Technology UI 1">
+                                                </div>
+                                                <div class="swiper-slide slide-item">
+                                                    <img src="assets/images/case-studies/grid/p-2.jpg" alt="Endurance Technology UI 2">
+                                                </div>
+                                                <div class="swiper-slide slide-item">
+                                                    <img src="assets/images/case-studies/grid/p-3.jpg" alt="Endurance Technology UI 3">
+                                                </div>
+                                                <div class="swiper-slide slide-item">
+                                                    <img src="assets/images/case-studies/grid/p-4.jpg" alt="Endurance Technology UI 4">
+                                                </div>
+                                            </div>
+                                            <!-- <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div> -->
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ui__content">
+                                        <p class="ui__desc">Endurance Technology Pvt Ltd</p>
+                                        <p class="ui__desc">Total Area - 60000 SQ Feet /2 shed</p>
+                                        <p class="ui__desc">QTY - 715 MT</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Second UI Item -->
+                            <div class="swiper-slide">
+                                <div class="ui-item">
+                                    <div class="ui__img">
+                                        <div class="swiper ui-image-slider ui-slider-2">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide slide-item">
+                                                    <img src="assets/images/case-studies/grid/p-5.jpg" alt="Tulsi Synergy UI 1">
+                                                </div>
+                                                <div class="swiper-slide slide-item">
+                                                    <img src="assets/images/case-studies/grid/p-6.jpg" alt="Tulsi Synergy UI 2">
+                                                </div>
+                                            </div>
+                                            <!-- <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div> -->
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="ui__content">
+                                        <p class="ui__desc">Tulsi Synergy Pvt Ltd</p>
+                                        <p class="ui__desc">Total Area - 100000 SQ Feet</p>
+                                        <p class="ui__desc">Shed Type - PEB shed</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Third UI Item -->
+                            <div class="swiper-slide">
+                                <div class="ui-item">
+                                    <div class="ui__img">
+                                        <div class="ui-image-slider single-image">
+                                            <div class="slide-item">
+                                                <img src="assets/images/case-studies/grid/p-7.jpg" alt="Warner Electronics UI 1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ui__content">
+                                        <p class="ui__desc">Warner Electronics India Pvt Ltd</p>
+                                        <p class="ui__desc">Total Area - 37000 SQ Feet</p>
+                                        <p class="ui__desc">Shed Type - Mezzanine floor</p>
+                                        <p class="ui__desc">Qty - 634 MT</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="carousel owl-carousel carousel-dots" data-slide="3" data-slide-md="2" data-slide-sm="1" data-autoplay="false" data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="800">
+    </section>
 
-                    <!-- First Card -->
-                    <div class="card-item" style="height: 500px;">
-                        <div class="card__img">
-                            <div class="card-image-slider owl-carousel">
-                                <div class="slide-item">
-                                    <img src="assets/images/case-studies/grid/p-1.jpg" alt="Endurance Technology Card 1">
-                                </div>
-                                <div class="slide-item">
-                                    <img src="assets/images/case-studies/grid/p-2.jpg" alt="Endurance Technology Card 2">
-                                </div>
-                                <div class="slide-item">
-                                    <img src="assets/images/case-studies/grid/p-3.jpg" alt="Endurance Technology Card 3">
-                                </div>
-                                <div class="slide-item">
-                                    <img src="assets/images/case-studies/grid/p-4.jpg" alt="Endurance Technology Card 4">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <p class="card__desc">Endurance technology Pvt Ltd</p>
-                            <p class="card__desc">Total Area - 60000 SQ Feet /2 shed</p>
-                            <p class="card__desc">QTY - 715 MT</p>
-                        </div>
-                    </div>
-
-                    <!-- Second Card -->
-                    <div class="card-item" style="height: 500px;">
-                        <div class="card__img">
-                            <div class="card-image-slider owl-carousel">
-                                <div class="slide-item">
-                                    <img src="assets/images/case-studies/grid/p-5.jpg" alt="Tulsi Synergy Card 1">
-                                </div>
-                                <div class="slide-item">
-                                    <img src="assets/images/case-studies/grid/p-6.jpg" alt="Tulsi Synergy Card 2">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <p class="card__desc">Tulsi Synergy pvt ltd</p>
-                            <p class="card__desc">Total Area - 100000 SQ Feet</p>
-                            <p class="card__desc">Shed Type - PEB shed</p>
-                        </div>
-                    </div>
-
-                    <!-- Third Card -->
-                    <div class="card-item" style="height: 500px;">
-                        <div class="card__img">
-                            <div class="card-image-slider single-image">
-                                <div class="slide-item">
-                                    <img src="assets/images/case-studies/grid/p-7.jpg" alt="Warner Electronics Card 1">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card__content">
-                            <p class="card__desc">Warner Electronics India Pvt Ltd</p>
-                            <p class="card__desc">Total Area - 37000 SQ Feet</p>
-                            <p class="card__desc">Shed Type - Mezzanine floor</p>
-                            <p class="card__desc">Qty -634 MT</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+  
     <!-- /.projects-carousel -->
 
 
@@ -1345,63 +1648,68 @@ Piyush Engineering Work</p>
     <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button>
   </div><!-- /.wrapper -->
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize main carousel
+            const mainCarousel = new Swiper('.main-ui-carousel', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: false,
+                speed: 800,
+                navigation: {
+                    nextEl: '.main-ui-carousel .swiper-button-next',
+                    prevEl: '.main-ui-carousel .swiper-button-prev',
+                },
+                pagination: {
+                    el: '.main-ui-carousel .swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    576: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    992: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                }
+            });
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.carousel.owl-carousel').owlCarousel({
-            items: 3,
-            loop: true,
-            autoplay: false,
-            nav: false,
-            dots: false,
-            margin: 30,
-            responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                992: { items: 3 }
-            }
-        });
-
-        $('.card-image-slider').each(function() {
-            var $slider = $(this);
-            var slideCount = $slider.find('.slide-item').length;
-
-            if (slideCount > 1) {
-                $slider.addClass('owl-carousel').owlCarousel({
-                    items: 1,
+            // Initialize individual image sliders
+            const imageSliders = document.querySelectorAll('.ui-image-slider:not(.single-image)');
+            imageSliders.forEach((slider, index) => {
+                new Swiper(slider, {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
                     loop: true,
-                    autoplay: true,
-                    autoplayTimeout: 4000,
-                    autoplayHoverPause: true,
-                    nav: true,
-                    dots: true,
-                    navText: ['<', '>'],
-                    animateOut: 'fadeOut',
-                    animateIn: 'fadeIn'
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    speed: 600,
+                    navigation: {
+                        nextEl: slider.querySelector('.swiper-button-next'),
+                        prevEl: slider.querySelector('.swiper-button-prev'),
+                    },
+                    pagination: {
+                        el: slider.querySelector('.swiper-pagination'),
+                        clickable: true,
+                    },
                 });
-            } else {
-                $slider.addClass('single-image');
-            }
+            });
         });
-    });
-</script>
-  
-<script>
-  const elements = document.querySelectorAll('.scroll-animate');
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  elements.forEach(el => observer.observe(el));
-</script>
+    </script>
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
