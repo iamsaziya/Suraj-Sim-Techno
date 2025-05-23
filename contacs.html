@@ -183,17 +183,19 @@
             Google Map
     =========================  -->
  
-<section id="googleMap" class="google-map p-0">
-  <style>
-      .map-responsive {
+
+
+        <div class="map">
+        <style>
+  .map {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Default 16:9 aspect ratio */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
   }
 
-  .map-responsive iframe {
+  .map iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -201,34 +203,17 @@
     height: 100%;
     border: 0;
   }
-
-  /* MEDIA QUERIES */
-  @media (max-width: 768px) {
-    .map-responsive {
-      padding-bottom: 75%; /* Taller for mobile devices */
+    /* Mobile and Tablet: height 100vh */
+  @media (max-width: 1024px) {
+    .map {
+      height: 100vh;
     }
   }
-
-  @media (max-width: 480px) {
-    .map-responsive {
-      padding-bottom: 100%; /* Square-ish for very small screens */
-    }
-
-    .google-map, .p-0{
-      margin-top: 150px;
-      height: 200px;
-    }
-  }
-  </style>
-  <div id="map" class="map-responsive">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32327.142664726023!2d75.1139900730133!3d19.72130069895359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb82bf0c000001%3A0x5bd4c9377ff37fca!2sSuraj%20SIM%20Techno%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1747458516265!5m2!1sen!2sin" 
-      allowfullscreen 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section><!-- /.GoogleMap -->
+</style>
+       
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.976800321243!2d75.23743911948267!3d19.84093453671385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdb9bd0acc678e1%3A0xf5fbb7326d2dfeef!2sMIDC%20Waluj%2C%20Waluj%2C%20Wadgaon%20Kolhati%2C%20Chhatrapati%20Sambhajinagar%2C%20Maharashtra%20431136!5e0!3m2!1sen!2sin!4v1747969028364!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    <!-- /.GoogleMap -->
 
 
     <!-- ==========================
@@ -340,6 +325,7 @@
 </form>
   </section>
     <!-- /.Contact 2 -->
+
 
     <!-- ========================
           Footer
